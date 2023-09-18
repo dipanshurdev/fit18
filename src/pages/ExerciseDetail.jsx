@@ -47,8 +47,8 @@ const ExerciseDetail = () => {
       );
 
       // Set States
-      setEquipmentMuscleExercise(equipmentData);
-      setTargetMuscleExercise(targetMuscle);
+      setEquipmentMuscleExercise(equipmentData.slice(0, 12));
+      setTargetMuscleExercise(targetMuscle.slice(0, 12));
       setExerciseDetail(exerciseDetailData);
       setVideos(exerciseVideosData.contents);
     };

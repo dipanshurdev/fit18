@@ -2,7 +2,7 @@ import React from "react";
 import { Stack, Typography } from "@mui/material";
 import Icon from "../assets/icons/gym.png";
 
-const BodyPart = ({ item, setBodyPart, bodyPart }) => {
+const BodyPart = ({ images, item, setBodyPart, bodyPart }) => {
   return (
     <Stack
       onClick={() => {
@@ -24,11 +24,13 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
       }}
     >
       <img
-        src={Icon}
+        src={images}
         alt="dumbbell"
         style={{
           width: "40px",
           height: "40px",
+          filter:
+            "invert(0%) sepia(0%)saturate(0%)hue-rotate(0deg)brightness(150%)contrast(100%)",
         }}
       />
       <Typography
