@@ -22,7 +22,6 @@ const Home = () => {
         setExercises={setExercises}
         bodyPart={bodyPart}
         exercises={exercises}
-        search={search}
       />
     </Box>
   );

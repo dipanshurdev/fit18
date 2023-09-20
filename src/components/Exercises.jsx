@@ -4,7 +4,7 @@ import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExerciseCard from "./ExerciseCard";
 import Loader from "./Loader";
 
-const Exercises = ({ exercises, setExercises, bodyPart, search }) => {
+const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [exercisesPerPage] = useState(6);
 
@@ -61,16 +61,7 @@ const Exercises = ({ exercises, setExercises, bodyPart, search }) => {
         mb="46px"
         textTransform="capitalize"
       >
-        {search ? (
-          <>
-            Showing <span style={{ color: "#ff2625" }}>{search}</span> Exercises
-          </>
-        ) : (
-          <>
-            Showing <span style={{ color: "#ff2625" }}>{bodyPart}</span>{" "}
-            Exercises
-          </>
-        )}
+        Showing Exercises
       </Typography>
       <Stack
         direction="row"
