@@ -8,12 +8,14 @@ const Navbar = () => {
     <Stack
       direction="row"
       justifyContent="space-around"
+      zIndex="99"
+      position="absolute"
       sx={{
         gap: {
           sm: "122px",
-          xs: "40px",
+          xs: "20px",
         },
-        mt: { sm: "32px", xs: "20px" },
+        mt: { sm: "10px", xs: "20px" },
         justifyContent: "none",
       }}
       px="20px"
@@ -37,14 +39,17 @@ const Navbar = () => {
           to="/"
           style={{
             textDecoration: "none",
-            color: "#777",
-            borderBottom: "3px solid #FF2625",
+            borderBottom: "3px solid #FFF",
+            color: "#ff2625",
           }}
         >
           {" "}
           Home
         </Link>
-        <a href="#exercises" style={{ textDecoration: "none", color: "#777" }}>
+        <a
+          href="#exercises"
+          style={{ textDecoration: "none", color: "#ff2625" }}
+        >
           Exercises
         </a>
       </Stack>

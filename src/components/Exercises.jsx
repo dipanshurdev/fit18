@@ -4,7 +4,7 @@ import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExerciseCard from "./ExerciseCard";
 import Loader from "./Loader";
 
-const Exercises = ({ exercises, setExercises, bodyPart }) => {
+const Exercises = ({ exercises, setExercises, bodyPart, search }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [exercisesPerPage] = useState(6);
 
@@ -29,6 +29,8 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     fetchExercisesData();
   }, [bodyPart]);
 
+  // console.log(exercises);
+
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
@@ -46,14 +48,29 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   if (!currentExercises.length) return <Loader />;
 
   return (
-    <Box id="exercises" sx={{ mt: { lg: "0px" } }} m="50px" p="20px">
+    <Box
+      id="exercises"
+      sx={{ mt: { lg: "0px" }, textAlign: { xs: "center" } }}
+      m="50px"
+      p="20px"
+    >
       <Typography
         variant="h4"
         fontWeight="bold"
         sx={{ fontSize: { lg: "44px", xs: "30px" } }}
         mb="46px"
+        textTransform="capitalize"
       >
-        Showing Exercises
+        {search ? (
+          <>
+            Showing <span style={{ color: "#ff2625" }}>{search}</span> Exercises
+          </>
+        ) : (
+          <>
+            Showing <span style={{ color: "#ff2625" }}>{bodyPart}</span>{" "}
+            Exercises
+          </>
+        )}
       </Typography>
       <Stack
         direction="row"

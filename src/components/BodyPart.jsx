@@ -1,6 +1,5 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
-import Icon from "../assets/icons/gym.png";
 
 const BodyPart = ({ images, item, setBodyPart, bodyPart }) => {
   return (
@@ -16,8 +15,8 @@ const BodyPart = ({ images, item, setBodyPart, bodyPart }) => {
       sx={{
         borderTop: bodyPart === item ? "4px solid #ff2625" : "",
         background: "#fff",
-        width: "200px",
-        height: "200px",
+        width: { lg: "200px", xs: "100" },
+        height: { lg: "200px", xs: "120px" },
         cursor: "pointer",
         gap: "10px",
         borderBottomLeftRadius: "20px",
@@ -34,7 +33,7 @@ const BodyPart = ({ images, item, setBodyPart, bodyPart }) => {
         }}
       />
       <Typography
-        fontSize="24px"
+        sx={{ fontSize: { lg: "24px", xs: "14px" } }}
         fontWeight="bold"
         color="#777"
         textTransform="capitalize"

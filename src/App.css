@@ -142,3 +142,11 @@ body {
     width: 280px;
   }
 }
+
+#banner {
+  background-image: url("./assets/images/hero-bg.jpg");
+  position: relative;
+  top: 0px;
+  z-index: 9;
+  background-position: center;
+}

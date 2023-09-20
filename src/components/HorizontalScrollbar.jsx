@@ -1,9 +1,9 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import BodyPart from "./BodyPart";
 import "react-horizontal-scrolling-menu/dist/styles.css";
 import { bodyPartImages } from "../assets/images";
-import { VisibilityContext, ScrollMenu } from "react-horizontal-scrolling-menu";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 // import RightArrowIcon from "../assets/icons/right-arrow.png";
 // import LeftArrowIcon from "../assets/icons/left-arrow.png";
 import ExerciseCard from "./ExerciseCard";
@@ -47,7 +47,7 @@ const HorizontalScrollbar = ({
             key={item}
             itemID={item.id || item}
             title={item.id || item}
-            m="0 40px"
+            sx={{ m: { lg: "0 40px", xs: "0 30px" } }}
           >
             {isBodyPart ? (
               <BodyPart

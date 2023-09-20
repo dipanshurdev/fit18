@@ -30,7 +30,6 @@ const ExerciseDetail = () => {
       );
 
       // Target muscle
-
       const targetMuscle = await fetchData(
         `
             ${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}

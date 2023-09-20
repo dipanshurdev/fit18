@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
-import { InfinitySpin } from "react-loader-spinner";
+import { ProgressBar } from "react-loader-spinner";
 
 const Loader = () => (
   <Stack
@@ -10,7 +10,7 @@ const Loader = () => (
     width="100%"
     flexDirection="column"
   >
-    <InfinitySpin color="#ff2625" />
+    <ProgressBar barColor="#ff2625" borderColor="#777" />
     <Typography textTransform="capitalize" variant="body1">
       please wait
     </Typography>
