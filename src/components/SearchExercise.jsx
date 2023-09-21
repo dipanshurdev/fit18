@@ -27,7 +27,7 @@ const SearchExercise = ({
   const handleSearch = async () => {
     if (search) {
       const exerciseData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises",
+        "https://exercisedb.p.rapidapi.com/exercises?limit=1000",
         exerciseOptions
       );
 
