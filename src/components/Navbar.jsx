@@ -2,6 +2,8 @@ import React from "react";
 import { Box, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/Logo.png";
+import { FaHome } from "react-icons/fa";
+import { CgGym } from "react-icons/cg";
 
 const Navbar = () => {
   return (
@@ -41,15 +43,26 @@ const Navbar = () => {
             textDecoration: "none",
             borderBottom: "3px solid #FFF",
             color: "#ff2625",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "5px",
           }}
         >
-          {" "}
-          Home
+          <FaHome /> Home
         </Link>
         <a
           href="#exercises"
-          style={{ textDecoration: "none", color: "#ff2625" }}
+          style={{
+            textDecoration: "none",
+            color: "#ff2625",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "5px",
+          }}
         >
+          <CgGym />
           Exercises
         </a>
       </Stack>

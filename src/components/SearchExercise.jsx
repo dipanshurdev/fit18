@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { fetchData, exerciseOptions } from "../utils/fetchData";
 import HorizontalScrollbar from "./HorizontalScrollbar";
+import {
+  MdOutlineKeyboardDoubleArrowLeft,
+  MdOutlineKeyboardDoubleArrowRight,
+} from "react-icons/md";
 
 const SearchExercise = ({
   setExercises,
@@ -106,7 +110,13 @@ const SearchExercise = ({
           mb="25px"
           textAlign="start"
         >
-          Select Body Part (slide)
+          <span style={{ fontSize: "28px", padding: "10px" }}>
+            <MdOutlineKeyboardDoubleArrowLeft />
+          </span>
+          Select Body Part
+          <span style={{ fontSize: "28px", padding: "10px" }}>
+            <MdOutlineKeyboardDoubleArrowRight />
+          </span>
         </Typography>
         <Box
           sx={{
