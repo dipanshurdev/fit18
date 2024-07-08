@@ -55,7 +55,13 @@ const ExerciseDetail = () => {
     };
 
     fetchExercisesData();
-  }, []);
+  }, [
+    equipmentMuscleExercise,
+    id,
+    videos,
+    targetMuscleExercise,
+    exerciseDetail,
+  ]);
 
   return (
     <Box>
