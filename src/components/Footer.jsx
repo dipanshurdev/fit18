@@ -23,9 +23,9 @@ const Footer = () => {
           Made by{" "}
           <a
             style={{ color: "#777", textDecoration: "none" }}
-            href="https://github.com/amanr-dev"
+            href="https://github.com/dipanshurdev"
           >
-            Aman Rawat
+            Dipanshu Rawat
           </a>
         </Typography>
       </Stack>
